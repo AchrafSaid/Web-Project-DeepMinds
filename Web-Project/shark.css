@@ -1,0 +1,342 @@
+body{background-color: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, midnightblue, #0056cc);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 rgba(0, 0, 0, 0.1);
+    animation: slidefromtop 1s ease-in-out;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #0077ff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+    display: inline-block;
+}
+.logo span {
+    color: antiquewhite; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+.nav-links li {
+    margin: 0 1rem;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20%;
+    transition: all 0.3s ease-in-out;
+}
+.nav-links a:hover {
+    background-color: antiquewhite;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 rgb(0, 0, 0);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+.why{
+    position: relative;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-left: 49%;
+    animation: slidefromtop 1s ease-in-out;
+}
+
+
+@keyframes slidefromtop{
+    from{
+    transform: translatey(-100%);
+    opacity: 0;
+    }
+    to{
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+@keyframes slidefrombottom{
+    from{
+        transform: translatey(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translatey(0%);
+        opacity: 1;
+        
+    }
+}
+header{
+    width:100%;
+    height:200px ;
+    background-image: url('images/carrent.png') ;   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: slidefromtop 1s ease-in-out;
+}
+#head-text{
+font-size: 20px;
+text-align: center;
+text-shadow:2px 2px midnightblue;
+animation: slidefromtop 1s ease-in-out;
+margin-top: 35px;
+}
+
+.contact{
+    font-family: "Brush Script MT", cursive;
+    text-align: left;
+    font-size: 30px;
+    margin-top: 640px;
+    margin-left:1px ;
+    position: fixed;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color:  floralwhite;
+
+}
+.num{
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 12px;
+    margin-top: 670px;
+    margin-left:38px ;
+
+    position: fixed;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: palegoldenrod;
+    padding: 2px;
+}
+.num2{
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 12px;
+    margin-top: 680px;
+    margin-left:38px ;
+
+    position: fixed;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: palegoldenrod;
+    padding: 2px;
+}
+.num3{
+    font-family: 'Times New Roman', Times, serif
+    ;
+    font-style: bold;
+    text-align: left;
+    font-size: 12px;
+    margin-top: 690px;
+    margin-left:38px ;
+
+    position: fixed;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: palegoldenrod;
+    padding: 2px;
+}
+.img1{
+     width: 20px;;
+    margin-top: 630px;
+    margin-right: 2190px;
+    position: fixed;
+   
+}
+.img2{
+    width: 20px;;
+    margin-top: 660px;
+   margin-right: 2190px;
+   position: fixed;
+
+}
+.img3{
+    width: 20px;;
+    margin-top: 690px;
+   margin-right: 2190px;
+   position: fixed;
+
+}
+form{
+   align-content: center;
+   text-align: center;
+
+   animation: slidefromtop 1s ease-in-out;
+}
+body{
+    background-image: url(images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+input[type=submit] {
+    background: linear-gradient(45deg, midnightblue, #0056cc);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type=date]{
+    width: 200px;
+    height: 200x;
+  }
+  legend{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+  }
+  .mySlides-fade{
+   margin-left: 90px;
+  }
+ 
+
+
+
+  .footer {
+    background: linear-gradient(45deg, midnightblue, #0056cc);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    height: 20%;
+    animation: slidefrombottom 1s ease-in-out;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-links, .contact-us, .newsletter, .social-media {
+    margin-bottom: 2rem;
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+.footer-links{
+margin-right: 20%;
+margin-bottom: 10%;
+}
+.footer-links h4, .contact-us h4, .newsletter h4, .social-media h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #00d4ff;
+}
+.contact-us a {
+    color: #00d4ff;
+    text-decoration: none;
+    
+}
+.contact-us a:hover {
+    text-decoration: underline;
+}
+.social-media a {
+    display: inline-block;
+    background-color: white;
+    color: #0077ff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 10%;
+}
+.social-media a:hover {
+    background-color: antiquewhite;
+    color: white;
+}
+.copyright {
+    margin-top: 7rem;
+    font-size: 0.9rem;
+
+}
+
+.copyright p {
+    
+    margin-top: -6.9%;
+
+}
+.social-media a.instagram-icon {
+    background-color: #E4405F; 
+    color: white;
+}
+
+.social-media a.facebook-icon {
+    background-color: #3b5998; 
+    color: white;
+}
+
+.social-media a.twitter-icon {
+    background-color: #1DA1F2; 
+    color: white;
+}
+
+.social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.1); 
+}
+.social-media{
+    margin-left: 15%;
+}

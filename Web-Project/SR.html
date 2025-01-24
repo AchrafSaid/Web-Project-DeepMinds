@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+    <title>Shark Rental</title>
+    <link rel="stylesheet" href="SR.css">
+    
+</head>
+<body>
+    <div class="HD">
+    </div>
+    <nav class="navbar">
+        <div class="logo">Shark <span>Rental</span></div>
+        <ul class="nav-links">
+            <li><a href="html_1.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul> 
+    </nav>
+    <form method="POST" action="cancel_res.php" onsubmit="return confirm('Are you sure you want to cancel your reservation?');">
+        <button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Cancel Reservation
+        </button>
+    </form>
+    
+        <form>
+            <fieldset>
+                <legend class="choose">Choose Car</legend>
+
+
+
+                
+            <div class="SUV">
+        <h3 style="font-size: 50px;">SUV</h3>
+        <table class="FT">
+            <tr> 
+                <th><img style="height: 20rem;" src=" Images/compressed_6dc64709ac6d26c3c8c121240d306a65.png"> <h2>Jeep Compass</h2><img src="Images/user_1077114.png"> 6 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">40L</th>
+                <th><img style="height:  20rem;" src="Images/compressed_97a50bb0178253d8225fd58cf59c446e.png"> <h2>Land Rover Defender</h2><img src="Images/user_1077114.png"> 6 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">55L</th>
+                <th><img style="height:  20rem;" src="Images/compressed_27db78a36f43b37b201f9a979c5ffe7d.png"> <h2>Toyota Land Cruiser</h2><img src="Images/user_1077114.png"> 6 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">40L</th>
+            </tr>
+            <tr class="dollar">
+                <th><h2>Price: <span>70</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+                <th><h2>Price: <span>50</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+                <th><h2>Price: <span>78</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+            </tr>
+            <tr><!-- Example for Jeep Compass -->
+                <td>
+                  <form id="update-form" method="POST" action="update_vehicle_status.php">
+                    <input type="hidden" name="vehicle_id" value="1"> <!-- ID of the vehicle -->
+                    <input type="hidden" name="pick_up_date" value="2024-12-21"> <!-- Example booking date -->
+                    <input type="hidden" name="return_date" value="2024-12-25"> <!-- Example return date -->
+                    <input id="jeep-compass" type="button" value="Available" onclick="toggleStatus('jeep-compass', 1)">
+                  </form>
+                </td>
+                
+                </td>
+                <td><input id="land-rover" type="button" value="Available"></td>
+                <td><input id="toyota-land-cruiser" type="button" value="Available"></td>
+            </tr>
+            <tr>
+                <th><img style="height:  20rem;" src="Images/compressed_9de3ff4ce3f967c2b380f1d62b89ff3e.png"> <h2>Range Rover</h2><img src="Images/user_1077114.png"> 6 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">65L</th>
+                <th><img style="height:  20rem;" src="Images/compressed_d44ce593fdb8ea01c98319a2443357bb.png"> <h2>Mercedes Benz</h2><img src="Images/user_1077114.png"> 6 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">70L</th>
+                <th><img style="height:  20rem;" src="Images/compressed_f72396a3f8bb029c61fe588078336053.png"> <h2>BMW X3</h2><img src="Images/user_1077114.png"> 6 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">80L</th>
+            </tr>
+            <tr class="dollar">
+                <th><h2>Price: <span>40</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+                <th><h2>Price: <span>90</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+                <th><h2>Price: <span>100</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+            </tr>
+            <tr>
+                <td><input id="range-rover" type="button" value="Available"></td>
+                <td><input id="mercedes-benz" type="button" value="Available"></td>
+                <td><input id="bmw-x3" type="button" value="Available"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="Sedan">
+        <h3 style="font-size: 50px;">Sedan</h3>
+        <table class="ST">
+            <tr> 
+                <th><img style="height:  20rem;" src="Images/compressed_4c9b3d62846a18bc0ba6bb4aca5ce0b5.png"> <h2>Hyundai Sonata</h2><img src="Images/user_1077114.png"> 4 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">35L</th>
+                <th><img style="height:  20rem;" src="Images/compressed_35a99eaf179088c80d75dd8320a109cf.png"> <h2>Mazda 3 Saloon</h2><img src="Images/user_1077114.png"> 4 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">40L</th>
+                <th><img style="height:  20rem;" src="Images/compressed_5966c0cee4cb9e07ffc624dec9adab37.png"> <h2>BMW 4 Series</h2><img src="Images/user_1077114.png"> 4 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">40L</th>
+            </tr>
+            <tr class="dollar">
+                <th><h2>Price: <span>2</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+                <th><h2>Price: <span>30</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+                <th><h2>Price: <span>222</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+            </tr>
+            <tr>
+                <td><input id="Hyundai-Sonata" type="button" value="Available"></td>
+                <td><input id="Mazda-3-Saloon" type="button" value="Available"></td>
+                <td><input id="BMW-4-Series" type="button" value="Available"></td>
+            </tr>
+            <tr>
+                <th><img style="height:  20rem;" src="Images/compressed_ddd024b277d6292a8679a93c269efe39.png"> <h2>Maserati Ghibli</h2><img src="Images/user_1077114.png"> 4 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">60L</th>
+                <th><img style="height:  20rem;" src="Images/toyota chamry.png"> <h2>Toyota Camry</h2><img src="Images/user_1077114.png"> 4 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">50L</th>
+                <th> <img style="height:  20rem;" src="Images/toyota MK2.png"> <h2>Toyota Mark X</h2><img src="Images/user_1077114.png"> 4 <img src="Images/gear_727520.png"> Auto <img src="Images/gas-station_1000488.png">60L</th>
+            </tr>
+            <tr class="dollar">
+                <th><h2>Price: <span>40</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+                <th><h2>Price: <span>65</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+                <th><h2>Price: <span>41</span> <img src="Images/dollar.png">/<img src="Images/24-hours.png"></h2></th>
+            </tr>
+            <tr>
+                <td><input id="Maserati-Ghibli" type="button" value="Available"></td>
+                <td><input id="Toyota-Camry" type="button" value="Available"></td>
+                <td><input id="Toyota-Mark-X" type="button" value="Available"></td>
+            </tr>
+        </table>
+    </div>
+</fieldset>
+</form>
+<br>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+            <div class="contact-us">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:support@mysite.com">support@sharkrental.com</a></p>
+                <p>Phone: 01xxxxxxxxx</p>
+            </div>
+
+<div class="social-media">
+    <h4>Follow Us</h4>
+    <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram-icon">IG</a>
+    <a href="https://www.facebook.com/" target="_blank" class="social-icon facebook-icon">FB</a>
+    <a href="https://twitter.com/" target="_blank" class="social-icon twitter-icon">X</a>
+</div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 SharkRntal. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="SR.js"></script>
+</body>
