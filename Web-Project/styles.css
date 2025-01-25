@@ -1,0 +1,328 @@
+/* Navbar remains fixed */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, midnightblue, #0056cc);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #0077ff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+    display: inline-block;
+}
+.logo span {
+    color: antiquewhite; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+.nav-links li {
+    margin: 0 1rem;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20%;
+    transition: all 0.3s ease-in-out;
+}
+.nav-links a:hover {
+    background-color: antiquewhite;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 rgb(0, 0, 0);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .footer {
+    background: linear-gradient(45deg, midnightblue, #0056cc);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    position:relative;
+    bottom: -1000px;
+    width: 100%;
+
+    height: 100%;
+    animation: slidefrombottom 1s ease-in-out;
+}
+.small{
+    text-align: center;
+    size: 100%;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-links, .contact-us, .newsletter, .social-media {
+    margin-bottom: 2rem;
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+.footer-links{
+margin-right: 20%;
+margin-bottom: 10%;
+}
+.footer-links h4, .contact-us h4, .newsletter h4, .social-media h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #00d4ff;
+}
+.contact-us a {
+    color: #00d4ff;
+    text-decoration: none;
+    
+}
+.contact-us a:hover {
+    text-decoration: underline;
+}
+.social-media a {
+    display: inline-block;
+    background-color: white;
+    color: #0077ff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 10%;
+}
+.social-media a:hover {
+    background-color: antiquewhite;
+    color: white;
+}
+.copyright {
+    margin-top: 7rem;
+    font-size: 0.9rem;
+
+}
+
+.copyright p {
+    
+    margin-top: -6.9%;
+
+}
+.social-media a.instagram-icon {
+    background-color: #E4405F; 
+    color: white;
+}
+
+.social-media a.facebook-icon {
+    background-color: #3b5998; 
+    color: white;
+}
+
+.social-media a.twitter-icon {
+    background-color: #1DA1F2; 
+    color: white;
+}
+
+.social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.1); 
+}
+.social-media{
+    margin-left: 15%;
+}
+/* Main Content Styling */
+
+/* Form container with proper spacing below the navbar */
+.container {
+    margin: 0 auto;
+    margin-top: 120px; /* Ensure enough space below the navbar */
+    max-width: 1200px;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+/* Titles Styling */
+h1 {
+    font-size: 2.5rem;
+    color: #0056cc;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+h3 {
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    color: #0056cc;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* User Info Card */
+.user-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 80%;
+}
+
+.user-card p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.user-card span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Reservation List Styling */
+.reservations {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reservations ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reservations li {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reservations li p {
+    margin: 0;
+    color: #333;
+}
+
+.reservations button {
+    padding: 0.5rem 1.5rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservations button:hover {
+    background-color: #c82333;
+}
+
+/* Form styling for alignment */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Extra spacing for separation */
+}
+form input {
+    padding: 0.8rem;
+    margin: 1rem 0;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 0.8rem 2rem;
+    background-color: #0056cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003c8f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

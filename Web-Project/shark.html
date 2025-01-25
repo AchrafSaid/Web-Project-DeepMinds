@@ -14,25 +14,28 @@
         <li><a href="html_1.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="manage_account.php">Manage Account</a></li> <!-- Add this line -->
     </ul>
 </nav>
+
+
 
     <header></header>
 
 
-    <form id="date-form" method="POST" action="date.php">
+    <form id="date-form" method="POST" action="date.php" action="dp1.php">
       <fieldset>
           <legend>Enter the pick-up and return date:</legend>
   
           <label for="pick-up-date">Pick-up Date:</label>
-          <input type="date" id="pick-up-date" name="pick_up_date" required>
+          <input type="date" id="pick-up-date" name="pick_up_date" required action="dp1.php">
   
           <label for="return-date">Return Date:</label>
-          <input type="date" id="return-date" name="return_date" required>
+          <input type="date" id="return-date" name="return_date" required action="dp1.php">
   
           <input type="hidden" name="customer_id" value="<?= $_SESSION['customer_id'] ?? '' ?>">
   
-          <input type="submit" value="Choose Car">
+          <input type="submit" value="Choose Car" action="dp1.php">
       </fieldset>
   </form>
   

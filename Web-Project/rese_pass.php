@@ -1,40 +1,32 @@
 <?php
-require 'db.php';
+session_start();
+include('db.php'); // Include the database connection
 
+// If the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $new_password = $_POST['new_password'];
-
-    if (strlen($new_password) < 8) {
-        echo "<script>alert('Password must be at least 8 characters long.'); window.history.back();</script>";
-        exit();
-    }
+    $customer_id = $_SESSION['customer_id']; // Use customer ID from session
+    $oldPassword = $_POST['old_password'];
+    $newPassword = $_POST['new_password'];
 
     try {
-        $sql = "SELECT * FROM customer WHERE email = :email";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        // Fetch the user's current password from the database
+        $query = $pdo->prepare("SELECT password FROM customer WHERE id = :id");
+        $query->execute(['id' => $customer_id]);
+        $user = $query->fetch();
 
-        if ($user) {
-            $hashed_password = password_hash($new_password, PASSWORD_BCRYPT);
-            $sql = "UPDATE customer SET password = :password WHERE email = :email";
-            $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':password', $hashed_password);
-            $stmt->bindParam(':email', $email);
+        // Check if the old password matches
+        if ($user && password_verify($oldPassword, $user['password'])) {
+            // Hash the new password and update in the database
+            $hashedNewPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+            $updateQuery = $pdo->prepare("UPDATE customer SET password = :new_password WHERE id = :id");
+            $updateQuery->execute(['new_password' => $hashedNewPassword, 'id' => $customer_id]);
 
-            if ($stmt->execute()) {
-                echo "<script>alert('Password reset successful!'); window.location.href = 'html_1.html';</script>";
-            } else {
-                echo "<script>alert('Failed to update password. Please try again later.'); window.history.back();</script>";
-            }
+            echo "<script>alert('Password updated successfully!'); window.location.href = 'manage_account.php';</script>";
         } else {
-            echo "<script>alert('Email not found. Please check and try again.'); window.history.back();</script>";
+            echo "<script>alert('Old password is incorrect.'); window.history.back();</script>";
         }
     } catch (PDOException $e) {
-        error_log("Error: " . $e->getMessage());
-        echo "<script>alert('An error occurred. Please try again later.'); window.history.back();</script>";
+        echo "<script>alert('Error: " . $e->getMessage() . "'); window.history.back();</script>";
     }
 }
 ?>

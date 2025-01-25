@@ -1,7 +1,6 @@
 <?php
 include('db.php');
 session_start();
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $pick_up_date = $_POST['pick_up_date'];
