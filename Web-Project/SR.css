@@ -26,8 +26,6 @@ body
 .SUV
 {
     text-align: center;
-
-
 }
 .Sedan
 {
@@ -40,6 +38,7 @@ body
     margin-left: auto;
     margin-right: auto;
     border:5px solid black;
+    padding: 3%;
 }
 .ST
 {
@@ -48,10 +47,12 @@ body
     margin-left: auto;
     margin-right: auto;
     border:5px solid black;
+    padding: 3%;
 }
 th
 {
     border:5px solid black;
+    border-radius: 20%;
 }
 
 .NON
