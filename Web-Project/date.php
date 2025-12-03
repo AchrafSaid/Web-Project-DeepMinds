@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $reservation_id = $pdo->lastInsertId();
 
         $_SESSION['reservation_id'] = $reservation_id;
-
+        #i love omar ali
         header('Location: SR.html');
         exit();
     } catch (Exception $e) {
