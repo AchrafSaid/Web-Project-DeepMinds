@@ -21,7 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['reservation_id'] = $reservation_id;
         #i love omar ali
+        b3bsssss
         header('Location: SR.html');
+        hsivhseiejvsrejvoes
         exit();
     } catch (Exception $e) {
         echo "<script>alert('Error: " . $e->getMessage() . "'); window.history.back();</script>";
