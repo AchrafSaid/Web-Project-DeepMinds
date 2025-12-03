@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         b3bsssss
         header('Location: SR.html');
         hsivhseiejvsrejvoes
+        echo ("test git")
         exit();
     } catch (Exception $e) {
         echo "<script>alert('Error: " . $e->getMessage() . "'); window.history.back();</script>";
